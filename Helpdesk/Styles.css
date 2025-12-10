@@ -1,0 +1,30 @@
+:root{
+  --bg:#f5f7fb;
+  --card:#fff;
+  --accent:#2b7cff;
+  --muted:#666;
+  --danger:#c0392b;
+}
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, Arial;
+  background:var(--bg);
+  margin:0;
+  color:#111;
+}
+.container{max-width:980px;margin:28px auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+h1{margin:0}
+.card{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(10,20,40,0.06)}
+.hidden{display:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.list{list-style:none;padding:0;margin:0}
+.list li{padding:8px;border-bottom:1px solid #eee}
+input,textarea,button{width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd}
+button{background:var(--accent);color:#fff;border:none;cursor:pointer}
+button.secondary{background:#eee;color:#111}
+.msg{min-height:20px;color:var(--danger);margin-bottom:6px}
+.report{background:#f1f5ff;padding:8px;border-radius:6px;white-space:pre-wrap}
+footer{margin-top:18px;text-align:center;color:var(--muted)}
+#userArea{font-size:14px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}

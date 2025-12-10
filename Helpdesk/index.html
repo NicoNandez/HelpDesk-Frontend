@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Helpdesk - Frontend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+
+<header>
+<h1>Helpdesk</h1>
+<div id="userArea"><em>No autenticado</em></div>
+</header>
+
+
+<!-- LOGIN -->
+<section id="loginSection" class="card">
+<h2>Iniciar sesión</h2>
+<div id="loginMsg" class="msg"></div>
+<form id="loginForm">
+<label>Email</label>
+<input type="email" id="email" required>
+<label>Contraseña</label>
+<input type="password" id="password" required>
+<button type="submit">Entrar</button>
+</form>
+</section>
+
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="hidden">
+<div class="grid">
+
+
+<div class="card">
+<h3>Casos</h3>
+<div id="casesMsg" class="msg"></div>
+<ul id="casesList" class="list"></ul>
+<button id="refreshCases">Actualizar</button>
+</div>
+
+
+<div class="card">
+<h3>Crear caso</h3>
+<div id="createMsg" class="msg"></div>
+<form id="caseForm">
+<label>Título</label>
+<input id="caseTitle" required>
+<label>Descripción</label>
+<textarea id="caseDesc" rows="4" required></textarea>
+<label>Asignado a (userId)</label>
+<input id="caseUserId" type="number" value="1" required>
+<button type="submit">Crear caso</button>
+</form>
+</div>
+
+
+<div class="card">
+<h3>Reportes</h3>
+<div id="reportMsg" class="msg"></div>
+<pre id="reportArea" class="report">—</pre>
+<button id="getReport">Generar reporte</button>
+</div>
+
+
+</div>
+</section>
+
+
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
