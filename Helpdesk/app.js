@@ -1,7 +1,7 @@
 // === CONFIG ===
 // Cambia aquí si tu API está en otra URL
 const API_BASE = "https://helpdesk-1-oxo6.onrender.com";
-
+const API_URL = "https://helpdesk-1-oxo6.onrender.com";
 // === HELPERS ===
 const $ = sel => document.querySelector(sel);
 const show = (sel) => $(sel).classList.remove("hidden");
@@ -151,3 +151,4 @@ $("#getReport").addEventListener("click", async () => {
 function escapeHtml(text){
   return String(text).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
 }
+
